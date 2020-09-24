@@ -1,6 +1,6 @@
 package testing;
 
-/* Uncomment the below code to test your application
+//Uncomment the below code to test your application
 
 import model.Bus;
 import java.time.LocalDate;
@@ -9,7 +9,7 @@ import org.junit.Test;
 
 public class TestBus {
 	LocalDate ld = LocalDate.of(2020, 02, 03);
-	Bus bus = new Bus(2, 1500, "acsleeper", ld);
+	Bus bus = new Bus(2, "acsleeper", 1500, ld);
 
 	@Test
 	public void testGetNoOfPersonMethod() {
@@ -27,13 +27,13 @@ public class TestBus {
 
 	@Test
 	public void testGetRateMethod() {
-		bus.setRates(1300);
-		assertEquals(1300, bus.getRates());
-		bus.setRates(800);
-		assertEquals(800, bus.getRates());
+		bus.setRate(1300);
+		assertEquals(1300, bus.getRate());
+		bus.setRate(800);
+		assertEquals(800, bus.getRate());
 		try {
-			bus.setRates(0);
-			bus.setRates(-500);
+			bus.setRate(0);
+			bus.setRate(-500);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -60,4 +60,4 @@ public class TestBus {
 	}
 }
 
-*/
+

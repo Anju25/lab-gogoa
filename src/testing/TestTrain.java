@@ -1,6 +1,6 @@
 package testing;
 
-/* Uncomment the below code to test your application
+// Uncomment the below code to test your application
 
 import model.Train;
 import java.time.LocalDate;
@@ -26,22 +26,22 @@ public class TestTrain {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testGetRateMethod() {
-		train.setRates(12000);
-		assertEquals(12000,train.getRates());
-		train.setRates(8000);
-		assertEquals(8000,train.getRates());
+		train.setRate(12000);
+		assertEquals(12000,train.getRate());
+		train.setRate(8000);
+		assertEquals(8000,train.getRate());
 		try {
-			train.setRates(0);
-			train.setRates(-500);
+			train.setRate(0);
+			train.setRate(-500);
 		}
 		catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testGetBerth() {
 		train.setBerth("ac1");
 		assertEquals("ac1",train.getBerth());
@@ -64,4 +64,4 @@ public class TestTrain {
 	}
 }
 
-*/
+
